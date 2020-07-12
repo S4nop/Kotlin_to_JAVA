@@ -1,0 +1,15 @@
+class Main{
+{
+Integer StringLength(Object obj){
+if(obj instanceof String){
+return ((String)obj).length
+}
+return null
+}
+public static void main(String[] args){
+
+System.out.println(StringLength("String"))
+}System.out.println(StringLength(123))
+}
+
+}
