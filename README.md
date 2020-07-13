@@ -1,24 +1,19 @@
 # Simple Kotlin_to_JAVA Compiler :: Using ANTLR4
 ---
 ## Introduction
-This project is assignment for [Sungkyunkwan University's PL class](http://dicl.skku.edu/class/spring2019/pl/)
-It provides the ability to translate some of [Kotlin's basic syntax](https://kotlinlang.org/docs/reference/basic-syntax.html) into JAVA Language
+This project is assignment for [Sungkyunkwan University's PL class](http://dicl.skku.edu/class/spring2019/pl/)  
+It provides the ability to translate some of [Kotlin's basic syntax](https://kotlinlang.org/docs/reference/basic-syntax.html) into JAVA Language  
 (Spring 2019)
 
 ---
 ### Structure & Simple Discription
 
 #### Lexer&Parser implemted by Antlr4
-[KotlinLexer.g4](src/main/java/KotlinLexer.g4)
-
-[KotlinParser.g4](src/main/java/KotlinParser.g4)
-
-[KotlinLexer.java](src/main/java/KotlinLexer.java)
-
-[KotlinParser.java](src/main/java/KotlinParser.java)
-
-[KotlinParserBaseListener.java](src/main/java/KotlinParserBaseListener.java)
-
+[KotlinLexer.g4](src/main/java/KotlinLexer.g4)  
+[KotlinParser.g4](src/main/java/KotlinParser.g4)  
+[KotlinLexer.java](src/main/java/KotlinLexer.java)  
+[KotlinParser.java](src/main/java/KotlinParser.java)  
+[KotlinParserBaseListener.java](src/main/java/KotlinParserBaseListener.java)  
 [KotlinParserListener.java](src/main/java/KotlinParserListener.java)
 
 ---
@@ -34,18 +29,14 @@ Main class of this project. It starts program flow like
 
 
 ##### 2. [KotlinListener.java](src/main/java/KotlinListener.java) : Listener Class
-Listener class, contains functions that respond when entering and exiting each token.
-
-Structure is automatically implemented by **Antlr4**
-
-It manages tokens using `stack`.
-
-Whenever enter a token, it is entered into the stack.
-
+Listener class, contains functions that respond when entering and exiting each token.  
+Structure is automatically implemented by **Antlr4**  
+It manages tokens using `stack`.  
+Whenever enter a token, it is entered into the stack.  
 Also it handles expressions using `KotlinExprForm`
-##### 3. [KotlinExprForm.java](src/main/java/KotlinExprForm.java) : Expr form Class
-Super class for variable expression handling classes.
 
+##### 3. [KotlinExprForm.java](src/main/java/KotlinExprForm.java) : Expr form Class
+Super class for variable expression handling classes.  
 Its child class is as follow:
 
 1. `KotlinCallExprForm` : Handling callable expressions
